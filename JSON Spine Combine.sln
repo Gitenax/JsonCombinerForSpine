@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON Spine Combine", "JSON Spine Combine\JSON Spine Combine.csproj", "{B3F37E04-7041-4C32-BF4E-45B1DDC0325F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Сombine", "Сombine\Сombine.csproj", "{8A75D2BB-0B0C-40B6-A402-BA02F546A4F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3F37E04-7041-4C32-BF4E-45B1DDC0325F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F37E04-7041-4C32-BF4E-45B1DDC0325F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F37E04-7041-4C32-BF4E-45B1DDC0325F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F37E04-7041-4C32-BF4E-45B1DDC0325F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A75D2BB-0B0C-40B6-A402-BA02F546A4F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A75D2BB-0B0C-40B6-A402-BA02F546A4F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A75D2BB-0B0C-40B6-A402-BA02F546A4F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A75D2BB-0B0C-40B6-A402-BA02F546A4F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

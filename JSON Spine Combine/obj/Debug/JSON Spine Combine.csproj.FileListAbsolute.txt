@@ -1,0 +1,36 @@
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\JSON_Spine_Combine.exe.config
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\JSON_Spine_Combine.exe
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\JSON_Spine_Combine.pdb
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON Spine Combine.csprojAssemblyReference.cache
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\App.g.cs
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine_MarkupCompile.cache
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine.g.resources
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine.Properties.Resources.resources
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON Spine Combine.csproj.GenerateResource.cache
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON Spine Combine.csproj.CoreCompileInputs.cache
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine.exe
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine.pdb
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Buffers.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Memory.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Numerics.Vectors.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Text.Encodings.Web.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Text.Json.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.ValueTuple.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Buffers.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Memory.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Numerics.Vectors.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Text.Encodings.Web.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Text.Json.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\System.ValueTuple.xml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON_Spine_Combine.exe.config
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\JSON Spine Combine.csproj.CopyComplete
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\MainWindow.g.cs
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\obj\Debug\MainWindow.baml
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\spinelib.dll
+D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\bin\Debug\spinelib.pdb

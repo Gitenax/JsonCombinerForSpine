@@ -1,0 +1,107 @@
+﻿<Window x:Class="JSON_Spine_Combine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Json комбайн"
+        MinHeight="260"
+        MinWidth="350"
+        MaxHeight="260" 
+        Width="525" 
+        WindowStartupLocation="CenterScreen">
+    
+    <DockPanel LastChildFill="True">
+        
+        <!-- Кнопка -->
+        <Grid DockPanel.Dock="Bottom"
+              Margin="0 0 0 11">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                
+            <Button 
+                Grid.Column="1"
+                x:Name="CombineJsonButton"
+                Margin="7 0"
+                Click="OnJsonCombineButtonClick"
+                Content="Комбинировать"/>
+        </Grid>
+        
+        <!-- Поля ввода -->
+        <Grid>
+            <Grid VerticalAlignment="Center">
+                <StackPanel Margin="11">
+                    <Label FontWeight="Bold">JSON с привязками:</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        
+                        <TextBox 
+                            Height="20" 
+                            IsReadOnly="True"
+                            x:Name="FirstJsonTextBox"/>
+                        <Button 
+                            Grid.Column="1" 
+                            Content="Обзор..." 
+                            Margin="7 0 0 0"
+                            x:Name="LoadFirstJsonButton"
+                            Click="OnFirstJsonLoadButtonClick"/>
+                        
+                        <CheckBox 
+                            Grid.Row="1"
+                            Margin="0 3"
+                            IsChecked="True"
+                            x:Name="CopyAnimationCheckBox"
+                            Content="Копировать анимацию"/>
+                    </Grid>
+                
+                    <Label FontWeight="Bold">JSON без привязок:</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox 
+                            Height="20" 
+                            IsReadOnly="True"
+                            x:Name="SecondJsonTextBox"/>
+                        <Button 
+                            Grid.Column="1" 
+                            Content="Обзор..." 
+                            Margin="7 0 0 0"
+                            x:Name="LoadSecondJsonButton"
+                            Click="OnSecondJsonLoadButtonClick"/>
+                    </Grid>
+                    
+                    <Label FontWeight="Bold">Каталог сохранения:</Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="75"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox 
+                            Height="20" 
+                            IsReadOnly="True"
+                            x:Name="SaveDirectoryJsonTextBox"/>
+                        <Button 
+                            Grid.Column="1" 
+                            Content="Обзор..." 
+                            Margin="7 0 0 0"
+                            x:Name="SelectSaveDirectioryJsonButton"
+                            Click="OnSelectSaveDirectioryJsonButtonClick"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        
+    </DockPanel>
+</Window>
