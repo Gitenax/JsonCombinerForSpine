@@ -21,8 +21,7 @@ namespace Сombine.Components.Attachments
             Name = name;
             Type = "mesh";
         }
-        public string Type { get; set; }
-        
+
         /// <summary>
         ///     Если указан, то это значение используется вместо имени вложения для поиска области текстуры.
         /// </summary>

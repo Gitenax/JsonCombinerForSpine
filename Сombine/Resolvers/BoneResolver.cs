@@ -28,6 +28,12 @@ namespace Сombine.Resolvers
             return default;
         }
 
+        public static void AdjustBonePositions(Bone[] bones, float scaleX, float scaleY)
+        {
+            foreach (var bone in bones)
+                bone.Adjust(scaleX, scaleY);
+        }
+        
         private static void AssignBoneIndex(Bone[] bones)
         {
             for (int i = 0; i < bones.Length; i++)

@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using System.Windows.Media;
 
 namespace Сombine.Components.Attachments
 {
@@ -8,6 +7,7 @@ namespace Сombine.Components.Attachments
         [JsonConstructor]
         public Region(float x, float y, float width, float height, float rotation, float scaleX, float scaleY)
         {
+	        Type = "region";
             X = x;
             Y = y;
             Width = width;
@@ -65,6 +65,6 @@ namespace Сombine.Components.Attachments
         /// <summary>
         ///     Цвет тонирования.
         /// </summary>
-        public Color Color { get; set; }
+        public object Color { get; set; }
     }
 }

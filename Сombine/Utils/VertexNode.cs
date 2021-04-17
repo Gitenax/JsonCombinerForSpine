@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Сombine.Utils
 {
@@ -36,6 +38,16 @@ namespace Сombine.Utils
         
         public int Count => Vertices.Length;
         public Vertex[] Vertices { get; set; }
+
+        public IEnumerable<float> GetX()
+        {
+            return Vertices.Select(x => x.X);
+        }
+
+        public IEnumerable<float> GetY()
+        {
+            return Vertices.Select(x => x.Y);
+        }
         
         public IEnumerator GetEnumerator()
         {

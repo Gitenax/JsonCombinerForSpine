@@ -88,6 +88,7 @@
         <Compile Include="Components\Skeleton.cs" />
         <Compile Include="Components\Skin.cs" />
         <Compile Include="Components\Slot.cs" />
+        <Compile Include="Converters\FloatJsonConverter.cs" />
         <Compile Include="Exceptions\InvalidJsonException.cs" />
         <Compile Include="Exceptions\MissingTiedVerticesException.cs" />
         <Compile Include="Exceptions\SlotConsistencyException.cs" />

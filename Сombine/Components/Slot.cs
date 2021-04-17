@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text.Json.Serialization;
-using System.Windows.Media;
 
 namespace Сombine.Components
 {
@@ -56,13 +55,13 @@ namespace Сombine.Components
         ///     <remarks>Если Альфа-канал не задан, по умолчанию он "FF".</remarks>
         ///     <remarks>По умолчанию "FFFFFFFF"</remarks>
         /// </summary>
-        public Color Color { get; set; }
+        public object Color { get; set; }
 
         /// <summary>
         ///     Темный цвет слота для установки позы, используется для двухцветной тонировки. Это 6-символьная строка, содержащая 3
         ///     двузначных шестнадцатеричных числа в порядке RGB.
         /// </summary>
-        public Color Dark { get; set; }
+        public object Dark { get; set; }
 
         /// <summary>
         ///     Препления слота для установки позы.

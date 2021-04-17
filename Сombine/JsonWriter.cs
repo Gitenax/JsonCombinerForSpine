@@ -8,15 +8,21 @@ namespace Сombine
     public class JsonWriter
     {
         private JsonSerializerOptions _options;
-        
-        
-        public JsonWriter()
+
+        public JsonWriter() : this(true) {}
+
+        public JsonWriter(bool compress)
+        {
+            ExecuteOptions(!compress);
+        }
+
+        private void ExecuteOptions(bool compress)
         {
             _options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
-                WriteIndented = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                WriteIndented = compress,
                 Converters =
                 {
                     new JsonStringEnumConverter(JsonNamingPolicy.CamelCase)

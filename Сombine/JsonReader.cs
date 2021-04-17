@@ -33,7 +33,6 @@ namespace Сombine
             _options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
-                WriteIndented = true,
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
                 Converters =
                 {
@@ -48,7 +47,7 @@ namespace Сombine
             using (_jsonDocument = JsonDocument.Parse(ReadFile()))
             {
                 AssignJsonElements();
-                SpineDocument document = new SpineDocument();
+                
 
                 // Десериализация
                 Skeleton skeletonObj = JsonSerializer.Deserialize<Skeleton>(GetRaw(_skeletonElement), _options);
@@ -61,14 +60,8 @@ namespace Сombine
                 BoneResolver.AssignParentToBones(boneArray);
                 SlotResolver.AssignBonesToSlots(boneArray, slots);
                 CompileAttachmentForSlotsFromSkins(skins, slots);
-                
-                document.Skeleton   = skeletonObj;
-                document.Bones      = boneArray;
-                document.Slots      = slots;
-                document.Skins      = skins;
-                document.Animations = animations;
-                
-                return document;
+
+                return new SpineDocument(skeletonObj, boneArray, slots, skins, animations);;
             }
         }
 
@@ -88,7 +81,7 @@ namespace Сombine
             _bonesElement      = _root.GetProperty("bones");
             _slotsElement      = _root.GetProperty("slots");
             _skinsElement      = _root.GetProperty("skins");
-            _animationsElement = _root.GetProperty("animations");
+            _animationsElement = _root.TryGetProperty("animations", out JsonElement value) ? value : default;
         }
 
         private string GetRaw(JsonElement element)

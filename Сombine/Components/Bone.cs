@@ -1,8 +1,5 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Text.Json.Serialization;
-using System.Windows.Media;
-using Сombine.Utils;
 
 namespace Сombine.Components
 {
@@ -118,7 +115,7 @@ namespace Сombine.Components
         ///     Цвет кости, как это было в Spine.
         ///     <example>Например #989898FF RGBA</example>
         /// </summary>
-        public Color Color { get; set; }
+        public object Color { get; set; }
 
         /// <summary>
         ///     Определяет, как наследуются трансформации родительской кости:
@@ -135,8 +132,13 @@ namespace Сombine.Components
         {
             Parent = bone;
         }
-        
 
+        public void Adjust(float scaleX, float scaleY)
+        {
+            X *= scaleX;
+            Y *= scaleY;
+        }
+        
         public override string ToString()
         {
             return $"Bone(" +

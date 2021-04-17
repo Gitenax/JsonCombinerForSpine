@@ -8,6 +8,7 @@ namespace Сombine.Components.Attachments
     {
         private float[] _vertices;
 
+        [JsonConstructor]
         public BoundingBox(string type, int vertexCount, object color)
         {
             Type = type;
@@ -22,7 +23,6 @@ namespace Сombine.Components.Attachments
         }
         
             
-        public string Type { get; set; }
         
         public int VertexCount { get; set; }
         
