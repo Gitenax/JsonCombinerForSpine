@@ -10,6 +10,7 @@
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Combiner.cs" t="Include" />
+        <e p="FileManager.cs" t="Include" />
         <e p="JSON Spine Combine.csproj" t="IncludeRecursive" />
         <e p="MainWindow.xaml" t="Include" />
         <e p="MainWindow.xaml.cs" t="Include" />
@@ -35,7 +36,13 @@
           <e p="Attachment.cs" t="Include" />
           <e p="Attachments" t="Include">
             <e p="BoundingBox.cs" t="Include" />
+            <e p="Clipping.cs" t="Include" />
+            <e p="IVertexExcludingAttachment.cs" t="Include" />
+            <e p="IVertexIncludingAttachment.cs" t="Include" />
+            <e p="LinkedMesh.cs" t="Include" />
             <e p="Mesh.cs" t="Include" />
+            <e p="Path.cs" t="Include" />
+            <e p="Point.cs" t="Include" />
             <e p="Region.cs" t="Include" />
           </e>
           <e p="Bone.cs" t="Include" />
@@ -49,6 +56,7 @@
         <e p="Exceptions" t="Include">
           <e p="InvalidJsonException.cs" t="Include" />
           <e p="MissingTiedVerticesException.cs" t="Include" />
+          <e p="NoModifySlotException.cs" t="Include" />
           <e p="SlotConsistencyException.cs" t="Include" />
           <e p="VertexConnectionException.cs" t="Include" />
         </e>
@@ -65,8 +73,7 @@
           <e p="SlotResolver.cs" t="Include" />
         </e>
         <e p="SpineDocument.cs" t="Include" />
-        <e p="Utils" t="Include">
-          <e p="ColorConverter.cs" t="Include" />
+        <e p="Units" t="Include">
           <e p="Vertex.cs" t="Include" />
           <e p="VertexCollection.cs" t="Include" />
           <e p="VertexNode.cs" t="Include" />

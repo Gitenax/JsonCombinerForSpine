@@ -101,17 +101,11 @@
 				<ColumnDefinition />
 				<ColumnDefinition />
 			</Grid.ColumnDefinitions>
-
-			<Button
-				x:Name="LoadTreeView"
-				Grid.Column="0"
-				Margin="0,8"
-				Click="LoadTreeView_OnClick"
-				Content="TreeView" />
-
+			
 			<Button
 				x:Name="CombineJsonButton"
 				Grid.Column="2"
+				IsEnabled="False"
 				Height="24"
 				Margin="3,8"
 				Click="OnJsonCombineButtonClick"
@@ -131,28 +125,30 @@
 			<Label Content="Объекты для модификации целевого JSON:" FontWeight="Bold" />
 
 			<ListView
-				x:Name="JsonAttachmentsTreeView"
+				x:Name="JsonAttachmentsListView" 
+				SelectionMode="Multiple"
 				Grid.Row="1"
 				Margin="0,0,0,7"
 				ItemsSource="{Binding}">
 				<ListView.View>
-					<GridView>
+					<GridView >
 						<GridViewColumn Header="#">
 							<GridViewColumn.CellTemplate>
 								<DataTemplate>
-									<CheckBox />
+									<CheckBox IsChecked="{Binding Path=IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}"/>
 								</DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
-						<GridViewColumn DisplayMemberBinding="{Binding Item1}" Header="Слот" />
+						<GridViewColumn DisplayMemberBinding="{Binding Name}" 
+						                Header="Слот"/>
 						<GridViewColumn Header="Тип">
 							<GridViewColumn.CellTemplate>
 								<DataTemplate>
-									<TextBlock FontWeight="Bold" Text="{Binding Item2}" />
+									<TextBlock FontWeight="Bold" Text="{Binding Attachment.Type}" />
 								</DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
-						<GridViewColumn DisplayMemberBinding="{Binding Item3}" Header="Прикрепление" />
+						<GridViewColumn DisplayMemberBinding="{Binding Attachment.Name}" Header="Прикрепление" />
 
 					</GridView>
 				</ListView.View>
@@ -176,13 +172,15 @@
 					x:Name="SelectAllAttachmentsButton"
 					Grid.Column="0"
 					Margin="3,0"
-					Content="Выделить все" />
+					Content="Выделить все"
+					Click="SelectAllAttachmentsButton_OnClick"/>
 
 				<Button
 					x:Name="DeselectAllAttachmentsButton"
 					Grid.Column="1"
 					Margin="3,0"
-					Content="Снять выделение" />
+					Content="Снять выделение"
+					Click="DeselectAllAttachmentsButton_OnClick"/>
 			</Grid>
 
 

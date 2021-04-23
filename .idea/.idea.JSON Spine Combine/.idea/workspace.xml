@@ -25,12 +25,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4d08c84-abea-495e-8ee7-7209b000f0cd" name="Default Changelist" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Сombine/Converters/FloatJsonConverter.cs" afterDir="false" />
+    <list default="true" id="b4d08c84-abea-495e-8ee7-7209b000f0cd" name="Default Changelist" comment="Add image scaling">
+      <change afterPath="$PROJECT_DIR$/JSON Spine Combine/FileManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/Clipping.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/IVertexExcludingAttachment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/IVertexIncludingAttachment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/LinkedMesh.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/Path.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/Point.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Сombine/Exceptions/NoModifySlotException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSON Spine Combine/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSON Spine Combine/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JSON Spine Combine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JSON Spine Combine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/Combiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/Combiner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSON Spine Combine/JSON Spine Combine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/JSON Spine Combine.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/bin/Debug/JSON_Spine_Combine.exe" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/bin/Debug/JSON_Spine_Combine.exe" afterDir="false" />
@@ -58,24 +65,30 @@
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON Spine Combine.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON Spine Combine.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON Spine Combine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON Spine Combine.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.exe" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/JSON_Spine_Combine_MarkupCompile.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/JSON Spine Combine/obj/Release/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Components/Attachment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Attachment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Components/Attachments/BoundingBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/BoundingBox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Components/Attachments/Mesh.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/Mesh.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Components/Attachments/Region.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Attachments/Region.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Components/Bone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Bone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Components/Skin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Skin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Components/Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Components/Slot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/JsonReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/JsonReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Сombine/JsonWriter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/JsonWriter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Resolvers/AttachmentResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Resolvers/AttachmentResolver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Resolvers/BoneResolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Resolvers/BoneResolver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/SpineDocument.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/SpineDocument.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Сombine/Utils/Vertex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Utils/Vertex.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Сombine/Utils/VertexNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Utils/VertexNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Utils/ColorConverter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Utils/Vertex.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Units/Vertex.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Utils/VertexCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Units/VertexCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/Utils/VertexNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Units/VertexNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/bin/Debug/spinelib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/bin/Debug/spinelib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/bin/Debug/spinelib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/bin/Debug/spinelib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/bin/Release/spinelib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/bin/Release/spinelib.dll" afterDir="false" />
@@ -87,6 +100,7 @@
       <change beforePath="$PROJECT_DIR$/Сombine/obj/Release/spinelib.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/obj/Release/spinelib.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/obj/Release/spinelib.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/obj/Release/spinelib.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/obj/Release/Сombine.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/obj/Release/Сombine.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Сombine/obj/Release/Сombine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/obj/Release/Сombine.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Сombine/Сombine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Сombine/Сombine.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +118,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16786CFD-571C-4686-9830-21CFCEE42FB4/1D/ReadOnlySpan.Portable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E81851A0-DC73-4A79-AFA9-F5B7273162BE/40/c66665b4/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/e9/e8d4a373/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F387BAD8-7692-4826-8AAD-8F3B717F5389/22/54ba11c5/Unsafe.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Сombine/Components/Slot.cs" root0="FORCE_HIGHLIGHTING" />
@@ -117,6 +132,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C074C98E-941F-4A94-95CF-370FFAD6903C/8b/ccc5ed2e/UIElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/1e/843e1631/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C074C98E-941F-4A94-95CF-370FFAD6903C/80/5e84e1e0/EventRoute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/f7/508aa429/ItemCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/8f/09114bcc/FileInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/e9/a43dccc5/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98DA60FB-018F-45A3-B582-47B74F013F3A/39/54fe3dd2/JsonAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/98DA60FB-018F-45A3-B582-47B74F013F3A/D/JsonElement.cs" root0="SKIP_HIGHLIGHTING" />
@@ -124,6 +141,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/98DA60FB-018F-45A3-B582-47B74F013F3A/2D/JsonPropertyNameAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/98DA60FB-018F-45A3-B582-47B74F013F3A/4/JsonDocument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/c1/9f8b2ccb/InlineCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/8f/bff724e2/InvalidCastException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Сombine/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/98DA60FB-018F-45A3-B582-47B74F013F3A/A8/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Сombine/Components/Attachments/Mesh.cs" root0="FORCE_HIGHLIGHTING" />
@@ -131,22 +149,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/50/74b5fcf0/__Error.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Сombine/Components/Skin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C074C98E-941F-4A94-95CF-370FFAD6903C/1d/caf0d62c/RoutedEventHandlerInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/c7/b3a4a5de/ListBox.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0C285EE5-6767-4513-BB6D-88C242FEC00E/8a/b7c96a69/Selector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Slots.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Slot.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Vector.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Skeleton.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Bone.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Windows/MainWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Attachment.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Bone.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Skeleton.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Slot.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Skin.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Attachment/Mesh.cs" />
         <option value="$PROJECT_DIR$/JSON Spine Combine/Spine/Attachments/Mesh.cs" />
         <option value="$PROJECT_DIR$/combine/Class1.cs" />
         <option value="$PROJECT_DIR$/combine/Bone.cs" />
@@ -160,31 +168,43 @@
         <option value="$PROJECT_DIR$/Сombine/Components/Skeleton.cs" />
         <option value="$PROJECT_DIR$/Сombine/Resolvers/SlotResolver.cs" />
         <option value="$PROJECT_DIR$/Сombine/Components/Attachments/CustomAttachments.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Resolvers/AttachmentResolver.cs" />
         <option value="$PROJECT_DIR$/JSON Spine Combine/VerifyFiles.cs" />
         <option value="$PROJECT_DIR$/Сombine/Utils/VetexCollection.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Skin.cs" />
         <option value="$PROJECT_DIR$/Сombine/Exceptions/InvalidJsonException.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Utils/VertexCollection.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Attachment.cs" />
         <option value="$PROJECT_DIR$/Сombine/Exceptions/MissingTiedVerticesException.cs" />
         <option value="$PROJECT_DIR$/Сombine/Exceptions/VertexConnectionException.cs" />
         <option value="$PROJECT_DIR$/Сombine/Exceptions/SlotConsistencyException.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Mesh.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/BoundingBox.cs" />
         <option value="$PROJECT_DIR$/Сombine/Properties/AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Slot.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Region.cs" />
         <option value="$PROJECT_DIR$/Сombine/Converters/FloatJsonConverter.cs" />
         <option value="$PROJECT_DIR$/Сombine/JsonWriter.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml" />
         <option value="$PROJECT_DIR$/Сombine/Utils/VertexNode.cs" />
-        <option value="$PROJECT_DIR$/Сombine/JsonReader.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml.cs" />
-        <option value="$PROJECT_DIR$/JSON Spine Combine/Combiner.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Resolvers/BoneResolver.cs" />
-        <option value="$PROJECT_DIR$/Сombine/Components/Bone.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/IDependentAttachment.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/BoundingBox.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Region.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/IVertex.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Slot.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Mesh.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/IVertexCollection.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Utils/VertexCollection.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Resolvers/AttachmentResolver.cs" />
         <option value="$PROJECT_DIR$/Сombine/Utils/Vertex.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Exceptions/SlotNullException.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Exceptions/NoModifySlotException.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/IVertexExcludingAttachment.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/IVertexIncludingAttachment.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Skin.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachment.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Point.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/LinkedMesh.cs" />
+        <option value="$PROJECT_DIR$/JSON Spine Combine/FileManager.cs" />
+        <option value="$PROJECT_DIR$/Сombine/JsonReader.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Path.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Attachments/Clipping.cs" />
+        <option value="$PROJECT_DIR$/JSON Spine Combine/Combiner.cs" />
+        <option value="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/JSON Spine Combine/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/Сombine/Components/Bone.cs" />
+        <option value="$PROJECT_DIR$/Сombine/Resolvers/BoneResolver.cs" />
         <option value="$PROJECT_DIR$/Сombine/SpineDocument.cs" />
       </list>
     </option>
@@ -240,7 +260,9 @@
       <workItem from="1617615346254" duration="86096000" />
       <workItem from="1618480896893" duration="10583000" />
       <workItem from="1618576152657" duration="11738000" />
-      <workItem from="1618670923530" duration="3042000" />
+      <workItem from="1618670923530" duration="7951000" />
+      <workItem from="1618910002442" duration="35085000" />
+      <workItem from="1619162020379" duration="702000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1618423528908</created>
@@ -249,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618423528908</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add image scaling">
+      <created>1618674637454</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618674637454</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +301,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Add image scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add image scaling" />
   </component>
   <component name="WindowStateProjectService">
     <state x="445" y="194" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617788576912">
@@ -287,137 +317,132 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="483" key="AddNewCultureDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618422770975" />
-    <state width="1045" height="490" key="DebuggerActiveHint" timestamp="1618671885831">
+    <state width="1045" height="490" key="DebuggerActiveHint" timestamp="1618947476941">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1045" height="490" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1618671885831" />
-    <state width="1815" height="170" key="GridCell.Tab.0.bottom" timestamp="1618673128140">
+    <state width="1045" height="490" key="DebuggerActiveHint/62.0.1858.1080@62.0.1858.1080" timestamp="1618947476941" />
+    <state width="1815" height="170" key="GridCell.Tab.0.bottom" timestamp="1619085518442">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="170" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1618673128140" />
-    <state width="1815" height="170" key="GridCell.Tab.0.center" timestamp="1618673128140">
+    <state width="1815" height="170" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518442" />
+    <state width="1815" height="170" key="GridCell.Tab.0.center" timestamp="1619085518441">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="170" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1618673128140" />
-    <state width="1815" height="170" key="GridCell.Tab.0.left" timestamp="1618673128140">
+    <state width="1815" height="170" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518441" />
+    <state width="1815" height="170" key="GridCell.Tab.0.left" timestamp="1619085518441">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="170" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1618673128140" />
-    <state width="1815" height="170" key="GridCell.Tab.0.right" timestamp="1618673128140">
+    <state width="1815" height="170" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518441" />
+    <state width="1815" height="170" key="GridCell.Tab.0.right" timestamp="1619085518442">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="170" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1618673128140" />
-    <state width="1815" height="260" key="GridCell.Tab.1.bottom" timestamp="1618672021323">
+    <state width="1815" height="170" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518442" />
+    <state width="1815" height="256" key="GridCell.Tab.1.bottom" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.1.center" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.1.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.1.center" timestamp="1619085518430">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.1.left" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.1.center/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518430" />
+    <state width="1815" height="256" key="GridCell.Tab.1.left" timestamp="1619085518430">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.1.right" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.1.left/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518430" />
+    <state width="1815" height="256" key="GridCell.Tab.1.right" timestamp="1619085518430">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.2.bottom" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.1.right/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518430" />
+    <state width="1815" height="256" key="GridCell.Tab.2.bottom" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.2.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.2.center" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.2.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.2.center" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.2.center/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.2.left" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.2.center/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.2.left" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.2.left/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.2.right" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.2.left/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.2.right" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.2.right/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.3.bottom" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.2.right/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.3.bottom" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.3.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.3.center" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.3.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.3.center" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.3.center/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.3.left" timestamp="1618672021323">
+    <state width="1815" height="256" key="GridCell.Tab.3.center/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.3.left" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.3.left/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021323" />
-    <state width="1815" height="260" key="GridCell.Tab.3.right" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.3.left/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.3.right" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.4.bottom" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.3.right/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.4.bottom" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.4.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.4.center" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.4.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.4.center" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.4.center/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.4.left" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.4.center/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.4.left" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.4.left/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
-    <state width="1815" height="260" key="GridCell.Tab.4.right" timestamp="1618672021324">
+    <state width="1815" height="256" key="GridCell.Tab.4.left/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
+    <state width="1815" height="256" key="GridCell.Tab.4.right" timestamp="1619085518431">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state width="1815" height="260" key="GridCell.Tab.4.right/62.0.1858.1080@62.0.1858.1080" timestamp="1618672021324" />
+    <state width="1815" height="256" key="GridCell.Tab.4.right/62.0.1858.1080@62.0.1858.1080" timestamp="1619085518431" />
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size" timestamp="1617096535246">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="583" y="271" key="Rider.ProjectTemplateDialog.Size/62.0.1858.1080@62.0.1858.1080" timestamp="1617096535246" />
-    <state x="819" y="213" key="RiderGenerateDialog" timestamp="1618484352398">
+    <state x="819" y="213" key="RiderGenerateDialog" timestamp="1618933458955">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="819" y="213" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618484352398" />
+    <state x="819" y="213" key="RiderGenerateDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618933458955" />
     <state x="492" y="184" key="SettingsEditor" timestamp="1618422629955">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="492" y="184" key="SettingsEditor/62.0.1858.1080@62.0.1858.1080" timestamp="1618422629955" />
-    <state x="583" y="272" key="Vcs.Push.Dialog.v2" timestamp="1618423538204">
+    <state x="154" y="92" width="1674" height="896" key="VCS.FileHistoryDialog" timestamp="1618919843426">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="583" y="272" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1618423538204" />
+    <state x="154" y="92" width="1674" height="896" key="VCS.FileHistoryDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618919843426" />
+    <state x="583" y="272" key="Vcs.Push.Dialog.v2" timestamp="1618674641752">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="583" y="272" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1618674641752" />
     <state x="797" y="274" width="998" height="531" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1618423501997">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="797" y="274" width="998" height="531" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618423501997" />
+    <state x="808" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619173601491">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="808" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/62.0.1858.1080@62.0.1858.1080" timestamp="1619173601491" />
     <state x="792" y="446" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618423434692">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="792" y="446" key="git4idea.remote.GitConfigureRemotesDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1618423434692" />
-    <state x="654" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1618586711158">
+    <state x="647" y="250" key="run.anything.popup" timestamp="1618681502206">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
-    <state x="654" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1618586711158" />
+    <state x="647" y="250" key="run.anything.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1618681502206" />
+    <state x="654" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1619162036112">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="654" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1619162036112" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/JSON Spine Combine/Combiner.cs</url>
-          <line>33</line>
-          <properties documentPath="D:\CodeWorks\C#\Work\JSON Spine Combine\JSON Spine Combine\Combiner.cs" initialLine="33">
-            <startOffsets>
-              <option value="968" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1016" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#System.ValueTuple`2" memberName="Item2" />
@@ -426,8 +451,15 @@
         <PinnedItemInfo parentTag="Type#Сombine.SpineDocument" memberName="Skeleton" />
         <PinnedItemInfo parentTag="Type#System.Text.Json.JsonElement" memberName="ValueKind" />
         <PinnedItemInfo parentTag="Type#Сombine.Utils.VetexCollection" memberName="_vertices" />
+        <PinnedItemInfo parentTag="Type#Сombine.Utils.VertexCollection" memberName="_nodes" />
         <PinnedItemInfo parentTag="Type#System.Text.Json.JsonValueKind" memberName="value__" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="_originalJson" />
+        <watch expression="_targerJson" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

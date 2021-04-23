@@ -2,7 +2,7 @@
 
 namespace Сombine.Components.Attachments
 {
-    public class Region : Attachment
+    public class Region : Attachment, IVertexExcludingAttachment
     {
         [JsonConstructor]
         public Region(float x, float y, float width, float height, float rotation, float scaleX, float scaleY)
@@ -66,5 +66,11 @@ namespace Сombine.Components.Attachments
         ///     Цвет тонирования.
         /// </summary>
         public object Color { get; set; }
+        
+        public void Adjust(float x, float y)
+        {
+            X *= x;
+            Y *= y;
+        }
     }
 }

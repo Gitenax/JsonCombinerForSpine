@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Сombine.Components;
 
-namespace Сombine.Utils
+namespace Сombine.Units
 {
     public class VertexCollection : IEnumerable
     {
@@ -53,6 +55,20 @@ namespace Сombine.Utils
                     array.AddRange(vtx.ToArray());
             }
             return array.ToArray();
+        }
+
+        public Bone[] GetRelativeBones()
+        {
+            HashSet<Bone> bones = new HashSet<Bone>();
+            foreach (var node in _nodes)
+            {
+                foreach (Vertex vertex in node)
+                {
+                    if (vertex.Connected)
+                        bones.Add(vertex.Parent);
+                }
+            }
+            return bones.ToArray();
         }
 
         public IEnumerator GetEnumerator()

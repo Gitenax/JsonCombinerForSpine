@@ -1,11 +1,26 @@
 ﻿using System;
 using System.Text.Json.Serialization;
+using Сombine.Units;
 
 namespace Сombine.Components
 {
     public class Bone
     {
         private string _parentName;
+        
+        public Bone(Bone copy, float x, float y)
+        {
+            Name = copy.Name;
+            Parent = copy.Parent;
+            Length = copy.Length;
+            X = x;
+            Y = y;
+            Rotation = copy.Rotation;
+            ScaleX = copy.ScaleX;
+            ScaleY = copy.ScaleY;
+            ShearX = copy.ShearX;
+            ShearY = copy.ShearY;
+        }
         
         [JsonConstructor]
         [Obsolete("Конструтор который используется только для работы с JSON", true)]
@@ -139,6 +154,14 @@ namespace Сombine.Components
             Y *= scaleY;
         }
         
+        public void AdjustLength(float scaleX, float scaleY)
+        {
+            float x = X + (float)Math.Cos(Rotation) * Length * scaleX;
+            float y = Y + (float)Math.Sin(Rotation) * Length * scaleY;
+            
+            Length = Magnitude(x, y, X, Y);
+        }
+        
         public override string ToString()
         {
             return $"Bone(" +
@@ -154,6 +177,14 @@ namespace Сombine.Components
                    $"shearY:{ShearY}, " +
                    $"color:{Color}, " +
                    $"transform:{Transform})";
+        }
+
+
+        private float Magnitude(float aX, float aY, float bX, float bY)
+        {
+            var x = aX - bX;
+            var y = aY - bY;
+            return (float)Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
         }
     }
 }

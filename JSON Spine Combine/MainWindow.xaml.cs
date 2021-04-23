@@ -1,12 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using Сombine;
+using Сombine.Components;
 using MessageBox = System.Windows.MessageBox;
-using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 using XDialogResult = System.Windows.Forms.DialogResult;
 
 namespace JSON_Spine_Combine
@@ -20,124 +19,89 @@ namespace JSON_Spine_Combine
 		{
 			InitializeComponent();
 			_combiner = new Combiner();
-			CopyAnimationCheckBox.Checked += (sender, args) =>
-			{
-				_combiner.CopyAnimation = true;
-			};
-			CopyAnimationCheckBox.Unchecked += (sender, args) =>
-			{
-				_combiner.CopyAnimation = false;
-			};
-			CompressJsonCheckBox.Checked += (sender, args) =>
-			{
-				_combiner.CompressJson = true;
-			};
-			CompressJsonCheckBox.Unchecked += (sender, args) =>
-			{
-				_combiner.CompressJson = false;
-			};
+			_combiner.SlotsLoaded += OnFitstJsonSlotsLoaded;
+			
+			CopyAnimationCheckBox.Checked   += (sender, args) =>  _combiner.CopyAnimation = true; 
+			CopyAnimationCheckBox.Unchecked += (sender, args) =>  _combiner.CopyAnimation = false; 
+			CompressJsonCheckBox.Checked    += (sender, args) =>  _combiner.CompressJson  = true; 
+			CompressJsonCheckBox.Unchecked  += (sender, args) =>  _combiner.CompressJson  = false;
 
-			SelectAllAttachmentsButton.Click += (sender, args) =>
-			{
+			
+			// FirstJsonTextBox.Text = _combiner.FirstJsonPath = FileManager.FirstPath = @"C:\Users\Gitenax\Desktop\ТЗ\Фикс размеров\Boned.json";
+			// SecondJsonTextBox.Text = _combiner.SecondJsonPath = FileManager.SecondPath = @"C:\Users\Gitenax\Desktop\ТЗ\Фикс размеров\Not.json";
+			// SaveDirectoryJsonTextBox.Text = _combiner.DestinationPath = FileManager.DestinationPath = @"C:\Users\Gitenax\Desktop\ТЗ\Фикс размеров\Combined.json";
+		}
 
-			};
+		private void OnFitstJsonSlotsLoaded(Slot[] obj)
+		{
+			JsonAttachmentsListView.ItemsSource = obj;
 		}
 		
-
-
 		private void OnFirstJsonLoadButtonClick(object sender, RoutedEventArgs e)
 		{
-			FileInfo file = ChooseJsonFile();
-			
+			FileInfo file = FileManager.ChooseJsonFile();
 			if (file == null) return;
 			
-			_combiner.FirstJsonPath = file.FullName;
-			FirstJsonTextBox.Text = file.FullName;
+			FirstJsonTextBox.Text = FileManager.FirstPath = file.FullName;
+			ClearListView();
+			_combiner.LoadOriginalJson(file.FullName);
+			CombineJsonButton.IsEnabled = _combiner.CheckDocuments();
 		}
 		
 		private void OnSecondJsonLoadButtonClick(object sender, RoutedEventArgs e)
 		{
-			FileInfo file = ChooseJsonFile();
-			
+			FileInfo file = FileManager.ChooseJsonFile();
 			if (file == null) return;
 			
-			_combiner.SecondJsonPath = file.FullName;
-			SecondJsonTextBox.Text = file.FullName;
+			SecondJsonTextBox.Text = FileManager.SecondPath = file.FullName;
+			ClearListView();
+			_combiner.LoadTargetJson(file.FullName);
+			CombineJsonButton.IsEnabled = _combiner.CheckDocuments();
+		}
+
+		private void ClearListView()
+		{
+			JsonAttachmentsListView.ItemsSource = null;
 		}
 		
 		private void OnSelectSaveDirectioryJsonButtonClick(object sender, RoutedEventArgs e)
 		{
-			using (var dialog = new SaveFileDialog())
-			{
-				dialog.InitialDirectory = _combiner.SecondJsonPath ?? _combiner.FirstJsonPath ?? Directory.GetCurrentDirectory();
-				dialog.Filter = "Файл Json(*.json)|*.json";
-				dialog.FileName = "combined.json";
-				
-				DialogResult result = dialog.ShowDialog();
+			var path = FileManager.SetDestinationFile();
+			SaveDirectoryJsonTextBox.Text = path;
+			FileManager.DestinationPath = path;
+		}
 
-				if (result == XDialogResult.OK)
-				{
-					_combiner.DestinationPath = dialog.FileName;
-					SaveDirectoryJsonTextBox.Text = _combiner.DestinationPath;
-				}
-			}
+		
+		private void SelectAllAttachmentsButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			JsonAttachmentsListView.SelectAll();
+		}
+
+		private void DeselectAllAttachmentsButton_OnClick(object sender, RoutedEventArgs e)
+		{
+			JsonAttachmentsListView.UnselectAll();
 		}
 		
 		private void OnJsonCombineButtonClick(object sender, RoutedEventArgs e)
 		{
-			_combiner.Combine();
-		}
-
-		private FileInfo ChooseJsonFile()
-		{
-			var dialog = new OpenFileDialog();
-			dialog.InitialDirectory = _combiner.FirstJsonPath ?? _combiner.SecondJsonPath ?? Directory.GetCurrentDirectory();
-			dialog.Filter = "Файл Json(*.json)|*.json";
+			var slots = new List<Slot>();
+			foreach (Slot slot in JsonAttachmentsListView.SelectedItems)
+				slots.Add(slot);
 			
-			if (dialog.ShowDialog() == true)
-			{
-				return new FileInfo(dialog.FileName);
-			}
-			return null;
+			_combiner.Combine(slots.ToArray());
 		}
 
-		private string RemoveExtension(string fileName, string extension)
+		private void ShowSelectedItems_OnClick(object sender, RoutedEventArgs e)
 		{
-			return fileName.Remove(fileName.Length - extension.Length, extension.Length);
-		}
-
-		private void LoadTreeView_OnClick(object sender, RoutedEventArgs e)
-		{
-			var firstJson = ReadJsonFile(FirstJsonTextBox.Text);
-
-
-			ObservableCollection<SpineDocument> documents = new ObservableCollection<SpineDocument>
+			var names = new List<string>();
+			foreach (Slot slot in JsonAttachmentsListView.SelectedItems)
 			{
-				firstJson
-			};
-
-
-			Dictionary<string, int[]> d = new Dictionary<string, int[]>();
-			d.Add("digits", new []{0,1,2,3,4,5,6});
-
-
-			JsonAttachmentsTreeView.ItemsSource = firstJson.GetTableData();
-		}
-
-		private SpineDocument ReadJsonFile(string path)
-		{
-			SpineDocument document = default;
-			try
-			{
-				document = new JsonReader(path).Deserialize();
+				names.Add(slot.Name + " | " + slot.Attachment.Type + " | " + slot.Attachment.Name);
 			}
-			catch (FileNotFoundException e)
-			{
-				MessageBox.Show("Указанного Json файла не существует по указанному пути!\n" +
-				                $"{path}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-			}
+			
+			var s = string.Join("\n", names);
 
-			return document;
+			MessageBox.Show(s);
 		}
 	}
 }

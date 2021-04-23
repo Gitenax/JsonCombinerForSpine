@@ -82,7 +82,13 @@
         <Compile Include="Components\Animation.cs" />
         <Compile Include="Components\Attachment.cs" />
         <Compile Include="Components\Attachments\BoundingBox.cs" />
+        <Compile Include="Components\Attachments\Clipping.cs" />
+        <Compile Include="Components\Attachments\IVertexExcludingAttachment.cs" />
+        <Compile Include="Components\Attachments\IVertexIncludingAttachment.cs" />
+        <Compile Include="Components\Attachments\LinkedMesh.cs" />
         <Compile Include="Components\Attachments\Mesh.cs" />
+        <Compile Include="Components\Attachments\Path.cs" />
+        <Compile Include="Components\Attachments\Point.cs" />
         <Compile Include="Components\Attachments\Region.cs" />
         <Compile Include="Components\Bone.cs" />
         <Compile Include="Components\Skeleton.cs" />
@@ -92,6 +98,7 @@
         <Compile Include="Exceptions\InvalidJsonException.cs" />
         <Compile Include="Exceptions\MissingTiedVerticesException.cs" />
         <Compile Include="Exceptions\SlotConsistencyException.cs" />
+        <Compile Include="Exceptions\NoModifySlotException.cs" />
         <Compile Include="Exceptions\VertexConnectionException.cs" />
         <Compile Include="JsonReader.cs" />
         <Compile Include="JsonWriter.cs" />
@@ -100,10 +107,9 @@
         <Compile Include="Resolvers\BoneResolver.cs" />
         <Compile Include="Resolvers\SlotResolver.cs" />
         <Compile Include="SpineDocument.cs" />
-        <Compile Include="Utils\ColorConverter.cs" />
-        <Compile Include="Utils\Vertex.cs" />
-        <Compile Include="Utils\VertexNode.cs" />
-        <Compile Include="Utils\VertexCollection.cs" />
+        <Compile Include="Units\Vertex.cs" />
+        <Compile Include="Units\VertexNode.cs" />
+        <Compile Include="Units\VertexCollection.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />

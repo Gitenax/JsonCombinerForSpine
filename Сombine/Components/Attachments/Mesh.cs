@@ -1,11 +1,12 @@
 ﻿using System.Text.Json.Serialization;
-using Сombine.Utils;
+using Сombine.Units;
 
 namespace Сombine.Components.Attachments
 {
-    public class Mesh : Attachment
+    public class Mesh : Attachment, IVertexIncludingAttachment
     {
         private float[] _vertices;
+        
         
         [JsonConstructor]
         public Mesh(string type, string path, float[] uvs, int[] triangles)
@@ -22,6 +23,7 @@ namespace Сombine.Components.Attachments
             Type = "mesh";
         }
 
+        
         /// <summary>
         ///     Если указан, то это значение используется вместо имени вложения для поиска области текстуры.
         /// </summary>
@@ -53,6 +55,9 @@ namespace Сombine.Components.Attachments
         [JsonIgnore]
         public VertexCollection VertexCollection { get; set; }
 
+        [JsonIgnore] 
+        public int VertexCount => UVs.Length / 2;
+        
         /// <summary>
         ///     Количество вершин, составляющих корпус многоугольника. Вершины корпуса всегда первыми в списке вершин.
         /// </summary>

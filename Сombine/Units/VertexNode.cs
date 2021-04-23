@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Сombine.Utils
+namespace Сombine.Units
 {
     /// <summary>
     /// Представляет контейнер связанных между собой костями вершин

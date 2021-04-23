@@ -28,7 +28,6 @@ namespace Сombine.Components
     /// </summary>
     public class Skin
     {
-        private string _attachmentsName;
         private object _attachmentObject;
         
         [JsonConstructor]

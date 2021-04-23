@@ -1,6 +1,6 @@
 ﻿using Сombine.Components;
 using Сombine.Components.Attachments;
-using Сombine.Utils;
+using Сombine.Units;
 
 namespace Сombine.Resolvers
 {
@@ -8,32 +8,22 @@ namespace Сombine.Resolvers
     {
         public static void VerifyAttachmentProperties(Attachment attachment)
         {
-            if (attachment is Mesh mesh)
+            if (attachment is IVertexIncludingAttachment mesh)
             {
-                int vertexCount = mesh.UVs.Length / 2;
-                
-                VertexCollection collection = new VertexCollection(vertexCount);
+                VertexCollection collection = new VertexCollection(mesh.VertexCount);
                 VertexNode[] nodes;
 
-                if (CheckWeightedVertices(mesh.Vertices, mesh.UVs))
-                    nodes = CreateWeightedNodes(mesh.Vertices, vertexCount);
+                if (mesh.Vertices.Length > mesh.VertexCount * 2)
+                    nodes = CreateWeightedNodes(mesh.Vertices, mesh.VertexCount);
                 else
-                    nodes = CreateSimpleNodes(mesh.Vertices, vertexCount);
+                    nodes = CreateSimpleNodes(mesh.Vertices, mesh.VertexCount);
                 
                 collection.AddRange(nodes);
-
+                
                 mesh.VertexCollection = collection;
             }
         }
-
-
         
-        private static bool CheckWeightedVertices(float[] vertices, float[] uvs)
-        {
-            return vertices.Length > uvs.Length;
-        }
-
-
         private static VertexNode[] CreateWeightedNodes(float[] vertices, int hull)
         {
             var nodes = new VertexNode[hull];
@@ -77,5 +67,5 @@ namespace Сombine.Resolvers
             
             return nodes;
         }
-    }
+        }
 }

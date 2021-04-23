@@ -5,6 +5,7 @@ namespace Сombine.Components
     public abstract class Attachment
     {
         public Slot Owner { get; set; }
+        
         [JsonIgnore]
         public string Name { get; set; }
         

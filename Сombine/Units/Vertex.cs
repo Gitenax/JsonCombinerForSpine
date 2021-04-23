@@ -2,7 +2,7 @@
 using System.Text.Json.Serialization;
 using Сombine.Components;
 
-namespace Сombine.Utils
+namespace Сombine.Units
 {
     public struct Vertex
     {
@@ -62,11 +62,7 @@ namespace Сombine.Utils
             float ratioY = Math.Abs(100 / (a.Y  / b.Y)  / 100);
             return new Vertex(ratioX, ratioY);
         }
-        
-        public void AssignBone(Bone parent)
-        {
-            Parent = parent;
-        }
+
 
         public void Adjust(float x, float y)
         {

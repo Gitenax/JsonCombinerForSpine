@@ -3,32 +3,22 @@ using Сombine.Units;
 
 namespace Сombine.Components.Attachments
 {
-    public class BoundingBox : Attachment, IVertexIncludingAttachment
+    public class Clipping : Attachment, IVertexIncludingAttachment
     {
         private float[] _vertices;
-        private int _vertexCount;
-        
         
         [JsonConstructor]
-        public BoundingBox(string type, int vertexCount, object color)
+        public Clipping(string type, int vertexCount)
         {
             Type = type;
-            _vertexCount = vertexCount;
-            Color = color;
+            VertexCount = vertexCount;
         }
-
-        public BoundingBox(string name)
-        {
-            Name = name;
-            Type = "boundingbox";
-        }
-
         
-        public int VertexCount
-        {
-            get => VertexCollection?.Count ?? _vertexCount;
-            set => _vertexCount = value;
-        }
+        
+        /// <summary>
+        /// Имя слота
+        /// </summary>
+        public string End { get; set; }
 
         public float[] Vertices
         {
@@ -39,6 +29,8 @@ namespace Сombine.Components.Attachments
         [JsonIgnore]
         public VertexCollection VertexCollection { get; set; }
         
+        public int VertexCount { get; }
+
         public object Color { get; set; }
     }
 }

@@ -85,7 +85,7 @@ namespace Сombine.Components
             {
                 return slot.AttachmentName == AttachmentName 
                        && slot.Name == Name 
-                       && slot.BoneName == BoneName;
+                       /*&& slot.BoneName == BoneName*/;
             }
             return false;
         }
